@@ -12,7 +12,7 @@ interface CoffeeListener {
     fun onSelected(id: Int)
 }
 
-class MainActivity : AppCompatActivity(), CoffeeListener {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,24 +25,24 @@ class MainActivity : AppCompatActivity(), CoffeeListener {
 
         Log.d(TAG, "onCreate")
 
-        if (savedInstanceState == null) {
-            findViewById<FragmentContainerView>(R.id.fragment_container).let {
-                containerLayout ->
-                    val listFragment = ListFragment()
-                    supportFragmentManager.beginTransaction().add(containerLayout.id, listFragment).commit()
-            }
-        }
+//        if (savedInstanceState == null) {
+//            findViewById<FragmentContainerView>(R.id.fragment_container).let {
+//                containerLayout ->
+//                    val listFragment = ListFragment()
+//                    supportFragmentManager.beginTransaction().add(containerLayout.id, listFragment).commit()
+//            }
+//        }
     }
 
-    override fun onSelected(id: Int) {
-//        val detailFragment = supportFragmentManager.findFragmentById(R.id.fragment_detail) as DetailFragment
-//        detailFragment.setCoffeeData(id)
-        findViewById<FragmentContainerView>(R.id.fragment_container).let {
-            containerLayout ->
-                val detailFragment = DetailFragment.newInstance(id)
-                supportFragmentManager.beginTransaction().replace(containerLayout.id, detailFragment).addToBackStack(null).commit()
-        }
-    }
+//    override fun onSelected(id: Int) {
+////        val detailFragment = supportFragmentManager.findFragmentById(R.id.fragment_detail) as DetailFragment
+////        detailFragment.setCoffeeData(id)
+//        findViewById<FragmentContainerView>(R.id.fragment_container).let {
+//            containerLayout ->
+//                val detailFragment = DetailFragment.newInstance(id)
+//                supportFragmentManager.beginTransaction().replace(containerLayout.id, detailFragment).addToBackStack(null).commit()
+//        }
+//    }
 
     override fun onStart() {
         super.onStart()
