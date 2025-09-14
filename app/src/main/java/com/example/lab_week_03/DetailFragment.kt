@@ -42,6 +42,12 @@ class DetailFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_detail, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val coffeeId = arguments?.getInt(COFFEE_ID, 0) ?: 0
+        setCoffeeData(coffeeId)
+    }
+
     fun setCoffeeData(id: Int) {
         when (id) {
             R.id.affogato -> {
@@ -69,12 +75,13 @@ class DetailFragment : Fragment() {
          * @return A new instance of fragment DetailFragment.
          */
         // TODO: Rename and change types and number of parameters
+
+        private const val COFFEE_ID = "COFFEE_ID"
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(coffeeId: Int) =
             DetailFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putInt(COFFEE_ID, coffeeId)
                 }
             }
     }
