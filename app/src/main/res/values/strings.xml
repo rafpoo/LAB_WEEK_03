@@ -11,5 +11,11 @@ extraction.)</string>
     <string name="latte_desc">A tall, mild \'milk coffee\' (about 150-300 ml). An
 espresso with steamed milk and only a little milk foam poured over it. Serve in a
 latte glass or a coffee cup. Flavored syrup can be added.</string>
+    <string name="luwak_title">LUWAK</string>
+    <string name="luwak_desc">Kopi luwak adalah kopi yang dihasilkan dari biji kopi yang telah dimakan dan dikeluarkan kembali oleh hewan luwak. Proses fermentasi alami di dalam pencernaan luwak membuat cita rasa kopi ini lebih halus, kurang asam, dan memiliki aroma khas yang unik. Karena prosesnya yang langka dan terbatas, kopi luwak dikenal sebagai salah satu kopi termahal di dunia.</string>
+    <string name="cappuccino_title">CAPPUCCINO</string>
+    <string name="cappuccino_desc">Cappuccino adalah minuman kopi khas Italia yang dibuat dari campuran espresso, susu panas, dan busa susu dengan perbandingan seimbang. Rasanya kaya, lembut, dan creamy, sering disajikan dengan taburan bubuk cokelat atau kayu manis di atas busa. Cappuccino biasanya diminum pada pagi hari dan populer di kafe seluruh dunia.</string>
     <string name="coffee_list">Coffee List</string>
+
+    <string name="button_back">BACK</string>
 </resources>
